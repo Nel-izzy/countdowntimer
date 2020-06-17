@@ -1,0 +1,59 @@
+.form {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: 30%;
+  padding: 1rem;
+  margin: 2rem 2rem 2rem;
+  box-shadow: 2px 1px 3px rgba(245, 200, 255, 0.7);
+  font-family: cursive;
+  box-sizing: border-box;
+}
+.event {
+  display: block;
+  width: 100%;
+  padding: 1rem 0;
+}
+.event label {
+  display: block;
+  padding: 1rem;
+}
+.event input {
+  display: block;
+  margin: 0.4rem 0.4rem;
+  padding: 0.5rem;
+  outline: none;
+}
+.date {
+  display: block;
+  width: 100%;
+  padding: 1rem 0;
+}
+.date label {
+  display: block;
+
+  padding: 1rem;
+}
+.date input {
+  display: block;
+  margin: 0.4rem 0.4rem;
+  padding: 0.5rem;
+  outline: none;
+}
+button {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: #0959dd;
+  padding: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+  letter-spacing: 0.4rem;
+  cursor: pointer;
+  font-family: cursive;
+}

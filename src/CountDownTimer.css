@@ -1,0 +1,77 @@
+.timer-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: cursive;
+  margin-top: 2rem;
+  width: 100%;
+}
+.days {
+  margin: 0 2rem;
+  background: #008744;
+  padding: 1rem 2rem;
+  border: none;
+  width: 40%;
+}
+.days h1 {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hours {
+  margin: 0 2rem;
+  background: #0057e7;
+  padding: 1rem 2rem;
+  border: none;
+  width: 40%;
+}
+.hours h1 {
+  text-align: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.minutes {
+  margin: 0 2rem;
+  background: #dc2d20;
+  padding: 1rem 2rem;
+  border: none;
+  width: 40%;
+}
+.minutes h1 {
+  text-align: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.seconds {
+  margin: 0 1rem;
+  background: #ffa700;
+  padding: 1rem 2rem;
+  border: none;
+  width: 40%;
+}
+.seconds h1 {
+  text-align: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.summary {
+  margin-top: 3rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.summary span {
+  color: #077d2d;
+  font-family: monospace;
+  font-weight: 700;
+}

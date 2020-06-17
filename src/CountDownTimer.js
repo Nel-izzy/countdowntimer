@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./CountDownTimer.css";
 
 export default class CountDownTimer extends Component {
   constructor(props) {
@@ -46,13 +47,19 @@ export default class CountDownTimer extends Component {
         this.setState((currState) => ({
           hours: currState.hours - 1,
           minutes: 59,
+          seconds: 59,
         }));
       }
       if (days > 0 && hours === 0 && minutes === 0 && seconds === 0) {
-        this.setState((currState) => ({ days: currState.days - 1, hours: 23 }));
+        this.setState((currState) => ({
+          days: currState.days - 1,
+          hours: 23,
+          minutes: 59,
+          seconds: 59,
+        }));
       }
     }, 1000);
-    console.log(this.state);
+    console.log(this.props.date);
   }
   componentWillUnmount() {
     clearInterval(this.myInterval);
@@ -60,15 +67,49 @@ export default class CountDownTimer extends Component {
 
   render() {
     const { minutes, seconds, hours, days } = this.state;
+
     return (
-      <div>
+      <div className="timer-wrapper">
         {minutes === 0 && seconds === 0 && days === 0 && hours === 0 ? (
           <h1>Countdown Finished!</h1>
         ) : (
-          <h1>
-            Time Remaining: {days} days {hours} hours {minutes} mins{" "}
-            {seconds < 10 ? `0${seconds} Sec` : `${seconds} Sec`}
-          </h1>
+          <div>
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <div className="days">
+                      <h1>{days}</h1>
+                      <h1>days</h1>
+                    </div>
+                  </td>
+                  <td>
+                    <div className="hours">
+                      <h1>{hours}</h1>
+                      <h1>hours</h1>
+                    </div>
+                  </td>
+                  <td>
+                    <div className="minutes">
+                      <h1>{minutes}</h1>
+                      <h1>minutes</h1>
+                    </div>
+                  </td>
+                  <td>
+                    <div className="seconds">
+                      <h1>{seconds}</h1>
+                      <h1>seconds</h1>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div className="summary">
+              <h2>
+                Countdown Timer for <span>{this.props.date}</span>
+              </h2>
+            </div>
+          </div>
         )}
       </div>
     );
